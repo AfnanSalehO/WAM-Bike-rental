@@ -81,27 +81,28 @@ public class Splach_screen extends javax.swing.JWindow {
     }// </editor-fold>                        
 
     private void panel1MouseEntered(java.awt.event.MouseEvent evt) {                                    
-Graphics g=panel1.getGraphics();
+    int [] xb ={44,114,182,244,304,369};
+    int [] xr = {38,167,291,};
+    int[] xm ={114,182,249,306,369};
+        Graphics g=panel1.getGraphics();
 g.setColor(Color.black);
-g.fillRect(38,207,110,49);
-g.fillRect(167,206,110,49);
-g.fillRect(291,207,110,49);
+for(int i=0;i<xr.length;i++){
+   g.fillRect(xr[i],207,110,49);
+}
+
 g.setColor(Color.red);
-g.fillOval(44,254,30,30);
-g.fillOval(114,254,30,30);
-g.fillOval(182,254,30,30);
-g.fillOval(244,254,30,30);
-g.fillOval(304,254,30,30);
-g.fillOval(369,254,30,30);
+for(int i=0;i<xb.length;i++){
+    g.fillOval(xb[i],254,30,30);
+}
+
 g.setColor(Color.black);
 g.drawLine(3,284,445,285);
 g.fillRect(46,177,15,32);
 g.setColor(Color.white);
-g.fillRect(114,221,14,24);
-g.fillRect(182,221,14,24);
-g.fillRect(249,221,14,24);
-g.fillRect(306,221,14,24);
-g.fillRect(369,221,14,24);
+for(int i=0;i<xm.length;i++){
+    g.fillRect(xm[i],221,14,24);
+}
+
     }                                   
 
     /**
