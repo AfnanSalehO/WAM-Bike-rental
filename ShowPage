@@ -297,7 +297,7 @@ catch (SQLException sqlEx) {
     }                                 
     public void ShowTD(){
 try{
-    connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WAMTrain","root","Aa201434");           
+    connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WAMTrain","root","12345");           
    String Sh="SELECT * FROM ticket_booking where Ticket_ID=null";
    ps=connection.prepareStatement(Sh);
     set=ps.executeQuery();
