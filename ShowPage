@@ -250,7 +250,7 @@ public class ShowPage extends javax.swing.JFrame {
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {                                       
        try{
-       connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WAMTrain","root","Aa201434");
+       connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WAMTrain","root","12345");
       // int n=Integer.parseInt(search.getText());
        String se="Select * from ticket_booking where Ticket_ID=?";
        ps=connection.prepareStatement(se);
@@ -267,7 +267,7 @@ catch (SQLException sqlEx) {
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {                                       
       try{
         String del="Delete From ticket_booking where Ticket_ID=?";
-     connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WAMTrain","root","Aa201434");           
+     connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WAMTrain","root","12345");           
        ps=connection.prepareStatement(del);
        ps.setString(1, search.getText());
        ps.executeUpdate();        // TODO add your handling code here:
